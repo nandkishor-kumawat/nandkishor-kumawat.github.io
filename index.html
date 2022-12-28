@@ -38,9 +38,21 @@
         <a href="https://javascripteventkeycodes.blogspot.com/" target="_blank" rel="noopener noreferrer"><span></span><span></span><span></span><span></span>javascript keycodes</a>
         <a href="https://tiny.cu.ma/" target="_blank" rel="noopener noreferrer"><span></span><span></span><span></span><span></span>URL shortner</a>
         <a href="https://ups.cu.ma/" target="_blank" rel="noopener noreferrer"><span></span><span></span><span></span><span></span>Private Note</a>
-        <!-- <a href="" target="_bla rel="noopener noreferrer"><span></span><span></span><span></span><span></span></a> -->
+        <!-- <a href="" target="_ rel="noopener noreferrer"><span></span><span></span><span></span><span></span></a> -->
 
     </div>
+
+
+    <script>
+        let allLinks = document.querySelectorAll('a');
+        allLinks.forEach(element => {
+            let r = Math.floor(Math.random() * 255);
+            let g = Math.floor(Math.random() * 255);
+            let b = Math.floor(Math.random() * 255);
+
+            element.style.setProperty("--colorLink", `rgb(${r}, ${g}, ${b})`)
+        });
+    </script>
 </body>
 
 </html>
