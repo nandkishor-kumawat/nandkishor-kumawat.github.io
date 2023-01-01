@@ -36,42 +36,11 @@ a {
 
 a:hover {
     background: var(--colorLink);
-    border-radius: 999999px;
+    border-radius: 50%;
     color: #050801;
     box-shadow: 0 0 5px var(--colorLink), 0 0 25px var(--colorLink), 0 0 50px var(--colorLink), 0 0 200px var(--colorLink);
 }
 
-/* a:nth-child(7) {
-    filter: hue-rotate(270deg);
-}
-
-a:nth-child(2) {
-    filter: hue-rotate(110deg);
-}
-
-a:nth-child(4) {
-    filter: hue-rotate(210deg);
-}
-
-a:nth-child(8) {
-    filter: hue-rotate(80deg);
-}
-
-a:nth-child(6) {
-    filter: hue-rotate(173deg);
-}
-
-a:nth-child(9) {
-    filter: hue-rotate(240deg);
-}
-
-a:nth-child(10) {
-    filter: hue-rotate(50deg);
-}
-
-a:nth-child(11) {
-    filter: hue-rotate(340deg);
-} */
 
 a span {
     position: absolute;
