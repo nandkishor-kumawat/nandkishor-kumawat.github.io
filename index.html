@@ -11,43 +11,45 @@
 <body>
     <div class="main">
         <h1>Github Pages</h1>
-        <a href="/html-editor" target="_blank" rel="noopener noreferrer"><span></span><span></span><span></span><span></span>html editor</a>
-        <a href="/multi-url-opener" target="_blank" rel="noopener noreferrer"><span></span><span></span><span></span><span></span>multi url opener</a>
-        <a href="/learn-typing" target="_blank" rel="noopener noreferrer"><span></span><span></span><span></span><span></span>learn typing</a>
-        <a href="/pgs" target="_blank" rel="noopener noreferrer"><span></span><span></span><span></span><span></span>Password Generator</a>
-        <a href="/pgu" target="_blank" rel="noopener noreferrer"><span></span><span></span><span></span><span></span>Password Generator Ultra</a>
-        <a href="/todo-app" target="_blank" rel="noopener noreferrer"><span></span><span></span><span></span><span></span>Todo App</a>
-        <a href="/sketch-box" target="_blank" rel="noopener noreferrer"><span></span><span></span><span></span><span></span>Sketch Box</a>
-        <a href="/clock" target="_blank" rel="noopener noreferrer"><span></span><span></span><span></span><span></span>Clock</a>
-        <a href="/tic-tac-toe" target="_blank" rel="noopener noreferrer"><span></span><span></span><span></span><span></span>Tic Tac Toe</a>
-        <a href="/quote-generator" target="_blank" rel="noopener noreferrer"><span></span><span></span><span></span><span></span>Quote Generator</a>
-        <a href="/sudoku" target="_blank" rel="noopener noreferrer"><span></span><span></span><span></span><span></span>Sudoku</a>
+        <a href="/html-editor" target="_blank" rel="noopener noreferrer">html editor</a>
+        <a href="/multi-url-opener" target="_blank" rel="noopener noreferrer">multi url opener</a>
+        <a href="/learn-typing" target="_blank" rel="noopener noreferrer">learn typing</a>
+        <a href="/pgs" target="_blank" rel="noopener noreferrer">Password Generator</a>
+        <a href="/pgu" target="_blank" rel="noopener noreferrer">Password Generator Ultra</a>
+        <a href="/todo-app" target="_blank" rel="noopener noreferrer">Todo App</a>
+        <a href="/sketch-box" target="_blank" rel="noopener noreferrer">Sketch Box</a>
+        <a href="/clock" target="_blank" rel="noopener noreferrer">Clock</a>
+        <a href="/tic-tac-toe" target="_blank" rel="noopener noreferrer">Tic Tac Toe</a>
+        <a href="/quote-generator" target="_blank" rel="noopener noreferrer">Quote Generator</a>
+        <a href="/sudoku" target="_blank" rel="noopener noreferrer">Sudoku</a>
 
 
 
         <h1>BLOGS For Learning</h1>
-        <a href="https://narvstechxis.blogspot.com/" target="_blank" rel="noopener noreferrer"><span></span><span></span><span></span><span></span>Narv's tech xis</a>
-        <a href="https://nandkishorofficial79.blogspot.com/" target="_blank" rel="noopener noreferrer"><span></span><span></span><span></span><span></span>knowledge treasure</a>
-        <a href="https://freetechnicalcourse.blogspot.com/" target="_blank" rel="noopener noreferrer"><span></span><span></span><span></span><span></span>free courses</a>
+        <a href="https://narvstechxis.blogspot.com/" target="_blank" rel="noopener noreferrer">Narv's tech xis</a>
+        <a href="https://nandkishorofficial79.blogspot.com/" target="_blank" rel="noopener noreferrer">knowledge treasure</a>
+        <a href="https://freetechnicalcourse.blogspot.com/" target="_blank" rel="noopener noreferrer">free courses</a>
 
 
 
 
         <h1>Free Web Tools</h1>
-        <a href="https://passwordgeneratorsimple.blogspot.com/" target="_blank" rel="noopener noreferrer"><span></span><span></span><span></span><span></span>Password Generator</a>
-        <a href="https://passwordgeneratorultra.blogspot.com/" target="_blank" rel="noopener noreferrer"><span></span><span></span><span></span><span></span>Password Generator-pro</a>
-        <a href="https://smurlopener.blogspot.com/" target="_blank" rel="noopener noreferrer"><span></span><span></span><span></span><span></span>multi url opener</a>
-        <a href="https://javascripteventkeycodes.blogspot.com/" target="_blank" rel="noopener noreferrer"><span></span><span></span><span></span><span></span>javascript keycodes</a>
-        <a href="https://tiny.cu.ma/" target="_blank" rel="noopener noreferrer"><span></span><span></span><span></span><span></span>URL shortner</a>
-        <a href="https://ups.cu.ma/" target="_blank" rel="noopener noreferrer"><span></span><span></span><span></span><span></span>Private Note</a>
-        <!-- <a href="" target="_ rel="noopener noreferrer"><span></span><span></span><span></span><span></span></a> -->
+        <a href="https://passwordgeneratorsimple.blogspot.com/" target="_blank" rel="noopener noreferrer">Password Generator</a>
+        <a href="https://passwordgeneratorultra.blogspot.com/" target="_blank" rel="noopener noreferrer">Password Generator-pro</a>
+        <a href="https://smurlopener.blogspot.com/" target="_blank" rel="noopener noreferrer">multi url opener</a>
+        <a href="https://javascripteventkeycodes.blogspot.com/" target="_blank" rel="noopener noreferrer">javascript keycodes</a>
+        <a href="https://tiny.cu.ma/" target="_blank" rel="noopener noreferrer">URL shortner</a>
+        <a href="https://ups.cu.ma/" target="_blank" rel="noopener noreferrer">Private Note</a>
+        <!-- <a href="" target="_ rel="noopener noreferrer"></a> -->
 
     </div>
 
 
     <script>
+        let allLinks = document.querySelectorAll('a');
+        allLinks.forEach(ele => ele.innerHTML += `<span></span><span></span><span></span><span></span>`);
+
         const changeColor = ()=>{
-            let allLinks = document.querySelectorAll('a');
             allLinks.forEach(element => {
                 let r = Math.floor(Math.random() * 255);
                 let g = Math.floor(Math.random() * 255);
