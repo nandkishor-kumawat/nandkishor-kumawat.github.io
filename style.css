@@ -36,11 +36,10 @@ a {
 
 a:hover {
     background: var(--colorLink);
-    border-radius: 50%;
+    border-radius: 999999px;
     color: #050801;
     box-shadow: 0 0 5px var(--colorLink), 0 0 25px var(--colorLink), 0 0 50px var(--colorLink), 0 0 200px var(--colorLink);
 }
-
 
 a span {
     position: absolute;
