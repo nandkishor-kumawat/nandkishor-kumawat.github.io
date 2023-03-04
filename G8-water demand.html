@@ -13,22 +13,36 @@
             margin: 0;
             box-sizing: border-box;
         }
-        body{
+
+        body {
             display: flex;
             flex-direction: column;
             align-items: center;
         }
+
+        h1 {
+            margin: 20px auto;
+        }
+
+        main {
+            width: calc(100% - 20px);
+            max-width: 540px;
+        }
+
+
         table {
             padding: 0;
-            /* border: 1px solid #000; */
             border-collapse: collapse;
-            margin: 12px;
-            max-width: 50vmin;
+            width: 100%;
         }
 
         th {
             padding: 6px 12px;
             font-size: 26px;
+        }
+
+        #table1 {
+            border-color: silver;
         }
 
         #table1 td:last-child {
@@ -38,13 +52,30 @@
             display: none;
         }
 
+        #table2 {
+            display: flex;
+            flex-direction: column;
+            color: #fff;
+            font-family: 'Courier New', Courier, monospace;
+            letter-spacing: 0.5px;
+        }
+
         #table2 td {
-            padding: 2px 4px;
+            padding: 8px;
+            border: none;
+        }
+
+        #table2 tr {
+            border: none;
+            background-color: dodgerblue;
+            margin: 2px 0;
+            display: flex;
+            justify-content: space-between;
         }
 
         input {
-            /* width: 48vmin; */
-            /* max-width: 200px; */
+            width: 100%;
+            text-align: center;
             padding: 6px;
             outline: none;
             border: none;
@@ -56,171 +87,175 @@
             font-size: 26px;
             padding: 6px 12px;
             background-color: dodgerblue;
-            margin: 12px;
+            /* margin: 12px; */
             color: #fff;
+            height: 100%;
             cursor: pointer;
-            border-radius: 3px;
+            /* border-radius: 3px; */
         }
 
         #year {
-            border: 1px solid #000;
+            width: 100%;
+            height: 100%;
+            font-size: 35px;
         }
 
         .div {
-            padding: 2px 8px;
             display: flex;
-            align-items: center;
+            height: 40px;
+            margin: 6px auto;
+            border: 1px solid #000;
         }
     </style>
 </head>
 
 <body>
-    <table border="1" id="table1">
-        <tr>
-            <th>Year</th>
-            <th col="2">Population</th>
-        </tr>
-        <tr>
-            <td><input type="text" value="1901" class="years"></td>
-            <td><input type="text" value="570851" class="ppls"></td>
-            <td>X</td>
-        </tr>
-        <tr>
-            <td><input type="text" value="1911" class="years"></td>
-            <td><input type="text" value="593132" class="ppls"></td>
-            <td>X</td>
-        </tr>
-        <tr>
-            <td><input type="text" value="1921" class="years"></td>
-            <td><input type="text" value="611144" class="ppls"></td>
-            <td>X</td>
-        </tr>
-        <tr>
-            <td><input type="text" value="1931" class="years"></td>
-            <td><input type="text" value="757051" class="ppls"></td>
-            <td>X</td>
-        </tr>
-        <tr>
-            <td><input type="text" value="1941" class="years"></td>
-            <td><input type="text" value="910464" class="ppls"></td>
-            <td>X</td>
-        </tr>
-        <tr>
-            <td><input type="text" value="1951" class="years"></td>
-            <td><input type="text" value="1454896" class="ppls"></td>
-            <td>X</td>
-        </tr>
-        <tr>
-            <td><input type="text" value="1961" class="years"></td>
-            <td><input type="text" value="1776329" class="ppls"></td>
-            <td>X</td>
-        </tr>
-        <tr>
-            <td><input type="text" value="1971" class="years"></td>
-            <td><input type="text" value="2579276" class="ppls"></td>
-            <td>X</td>
-        </tr>
-        <tr>
-            <td><input type="text" value="1981" class="years"></td>
-            <td><input type="text" value="3276622" class="ppls"></td>
-            <td>X</td>
-        </tr>
-        <tr>
-            <td><input type="text" value="1991" class="years"></td>
-            <td><input type="text" value="3841396" class="ppls"></td>
-            <td>X</td>
-        </tr>
-        <tr>
-            <td><input type="text" value="2001" class="years"></td>
-            <td><input type="text" value="4343645" class="ppls"></td>
-            <td>X</td>
-        </tr>
-        <tr>
-            <td><input type="text" value="2011" class="years"></td>
-            <td><input type="text" value="4646732" class="ppls"></td>
-            <td>X</td>
-        </tr>
-    </table>
-    <div>
-        <!-- <button id="addBtn">Add Row</button> -->
-    </div>
-    <div class="div">
-        <input type="number" name="" id="year" placeholder="Enter year">
+    <header>
+        <h1>Water Demand Calculater</h1>
+    </header>
+    <main>
+        <div class="row">
+            <table border="1" id="table1">
+                <tr>
+                    <th>Year</th>
+                    <th col="2">Population</th>
+                </tr>
+                <tr>
+                    <td><input type="text" value="1901" class="years"></td>
+                    <td><input type="text" value="570851" class="ppls"></td>
+                    <td>X</td>
+                </tr>
+                <tr>
+                    <td><input type="text" value="1911" class="years"></td>
+                    <td><input type="text" value="593132" class="ppls"></td>
+                    <td>X</td>
+                </tr>
+                <tr>
+                    <td><input type="text" value="1921" class="years"></td>
+                    <td><input type="text" value="611144" class="ppls"></td>
+                    <td>X</td>
+                </tr>
+                <tr>
+                    <td><input type="text" value="1931" class="years"></td>
+                    <td><input type="text" value="757051" class="ppls"></td>
+                    <td>X</td>
+                </tr>
+                <tr>
+                    <td><input type="text" value="1941" class="years"></td>
+                    <td><input type="text" value="910464" class="ppls"></td>
+                    <td>X</td>
+                </tr>
+                <tr>
+                    <td><input type="text" value="1951" class="years"></td>
+                    <td><input type="text" value="1454896" class="ppls"></td>
+                    <td>X</td>
+                </tr>
+                <tr>
+                    <td><input type="text" value="1961" class="years"></td>
+                    <td><input type="text" value="1776329" class="ppls"></td>
+                    <td>X</td>
+                </tr>
+                <tr>
+                    <td><input type="text" value="1971" class="years"></td>
+                    <td><input type="text" value="2579276" class="ppls"></td>
+                    <td>X</td>
+                </tr>
+                <tr>
+                    <td><input type="text" value="1981" class="years"></td>
+                    <td><input type="text" value="3276622" class="ppls"></td>
+                    <td>X</td>
+                </tr>
+                <tr>
+                    <td><input type="text" value="1991" class="years"></td>
+                    <td><input type="text" value="3841396" class="ppls"></td>
+                    <td>X</td>
+                </tr>
+                <tr>
+                    <td><input type="text" value="2001" class="years"></td>
+                    <td><input type="text" value="4343645" class="ppls"></td>
+                    <td>X</td>
+                </tr>
+                <tr>
+                    <td><input type="text" value="2011" class="years"></td>
+                    <td><input type="text" value="4646732" class="ppls"></td>
+                    <td>X</td>
+                </tr>
+            </table>
+        </div>
+        <div class="div row">
+            <input type="text" name="" id="year" placeholder="Enter year" value="2038">
+            <button class="btn btn-primary" id="calcBtn">Calculate</button>
+        </div>
+        <div class="row">
+            <table id="table2">
+                <tr>
+                    <th>Demand</th>
+                    <th>value</th>
 
-        <button class="btn btn-primary" id="calcBtn">Calculate</button>
-    </div>
-    <br>
-    <table border="1" id="table2">
-        <tr>
-            <th>Demand</th>
-            <th>value</th>
-
-        </tr>
-        <tr>
-            <td>Forecasted Population</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>Domestic Water Demand (MLD)</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>Total Water Consumption (MLD)</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>Industrial Water Demand (MLD)</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>Institutional Water Demand (MLD)</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>Demand for Public Use (MLD)</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>Fire Demand (MLD)</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>Water for Compensation of Losses in Wastes And Thefts (MLD)</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>Total Water Demand/ Consumption (MLD)</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>Per Capita Demand(Average daily demand)</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>Maximum Daily Consumption (lpcd)</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>Maximum Hourly Consumption (litres per capita per hour)</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>Peak Demand (lpcd)</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>Coincident Draft (lpcd)</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>Total Draft (lpcd)</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>Calculation</td>
-            <td></td>
-        </tr>
-    </table>
+                </tr>
+                <tr>
+                    <td>Forecasted Population</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Domestic Water Demand</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Total Water Consumption</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Industrial Water Demand</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Institutional Water Demand</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Demand for Public Use</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Fire Demand</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Water for Compensation of Losses in Wastes And Thefts</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Total Water Demand/ Consumption</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Per Capita Demand(Average daily demand)</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Maximum Daily Consumption</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Maximum Hourly Consumption</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Peak Demand</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Coincident Draft</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Total Draft</td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+    </main>
 
 
 
@@ -239,9 +274,15 @@
                 e.target.value = e.target.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');
             })
         })
-        // calcDemand(2038)
+        calcDemand(2038)
 
-        document.querySelector('#calcBtn').addEventListener('click', () => {
+        document.querySelector('#calcBtn').addEventListener('click', compute)
+        document.querySelector('#year').addEventListener('keydown', (e)=>{
+            if(e.key === "Enter") compute()
+    
+        })
+
+        function compute(){
             let input = document.querySelectorAll('input')
             let year = document.querySelector('#year').value
             for (let i = 0; i < input.length; i++) {
@@ -260,14 +301,7 @@
             //     return
             // }
             calcDemand(year)
-        })
-
-        // document.querySelector('#addBtn').addEventListener('click', () => {
-        //     let table1 = document.querySelectorAll
-        // })
-
-        let td = document.querySelectorAll(`#table1 td:nth-child(${2})`)
-
+        }
 
         document.querySelectorAll(`#table1 td:nth-child(${3})`).forEach(del => {
             del.addEventListener('click', (e) => {
@@ -315,49 +349,56 @@
             td[0].textContent = population
 
             let domestic = ((200 * population / Math.pow(10, 6)))
-            td[1].textContent = domestic.toFixed(2)
+            td[1].textContent = domestic.toFixed(2) + ' MLD'
 
             let totalAssumed = ((domestic / 0.6))
-            td[2].textContent = totalAssumed.toFixed(2)
+            td[2].textContent = totalAssumed.toFixed(2) + ' MLD'
 
             let industrial = ((50 * population / Math.pow(10, 6)))
-            td[3].textContent = industrial.toFixed(2)
+            td[3].textContent = industrial.toFixed(2) + ' MLD'
 
             let institutional = ((20 * population / Math.pow(10, 6)))
-            td[4].textContent = institutional.toFixed(2)
+            td[4].textContent = institutional.toFixed(2) + ' MLD'
 
             let publicUse = ((0.05 * totalAssumed))
-            td[5].textContent = publicUse.toFixed(2)
+            td[5].textContent = publicUse.toFixed(2) + ' MLD'
 
             let fire = (calcFire(population))
-            td[6].textContent = fire.toFixed(2)
+            td[6].textContent = fire.toFixed(2) + ' MLD'
 
             let lossTheft = ((0.15 * totalAssumed))
-            td[7].textContent = lossTheft.toFixed(2)
+            td[7].textContent = lossTheft.toFixed(2) + ' MLD'
 
             let totalDemand = domestic + industrial + institutional + publicUse + lossTheft
-            td[8].textContent = totalDemand.toFixed(2)
+            td[8].textContent = totalDemand.toFixed(2) + ' MLD'
 
             let perCapita = ((totalDemand * Math.pow(10, 6) / population))
-            td[9].textContent = perCapita.toFixed(2)
+            td[9].textContent = perCapita.toFixed(2) + ' lpcd'
 
             let maxDaily = ((1.8 * perCapita))
-            td[10].textContent = maxDaily.toFixed(2)
+            td[10].textContent = maxDaily.toFixed(2) + ' lpcd'
 
             let maxHour = ((1.5 * perCapita / 24))
-            td[11].textContent = maxHour.toFixed(2)
+            td[11].textContent = maxHour.toFixed(2) + ' lpch'
 
             let peakDemand = ((2.7 * perCapita))
-            td[12].textContent = peakDemand.toFixed(2)
+            td[12].textContent = peakDemand.toFixed(2) + ' lpcd'
 
             let coinDraft = (maxDaily + fire * Math.pow(10, 6) / population)
-            td[13].textContent = coinDraft.toFixed(2)
+            td[13].textContent = coinDraft.toFixed(2) + ' lpcd'
 
             let totalDraft = Math.max(coinDraft, maxHour)
-            td[14].textContent = totalDraft.toFixed(2)
+            td[14].textContent = totalDraft.toFixed(2) + ' lpcd'
         }
 
 
+    </script>
+    <script>
+        // window.onresize = () => {
+        //     let wid = window.innerWidth - 30
+        //     document.body.style.setProperty('--wid', wid + 'px');
+        //     console.log(wid)
+        // }
     </script>
 </body>
 
