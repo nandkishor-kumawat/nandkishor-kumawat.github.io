@@ -82,6 +82,28 @@
             height: 30px;
         }
 
+        input.error,
+        input.error:focus {
+            box-shadow: inset 0 0 1px 2px red;
+            animation: shake .1s cubic-bezier(0.075, 0.82, 0.165, 1);
+        }
+
+        @keyframes shake {
+
+            0%,
+            100% {
+                transform: translateX(-0);
+            }
+
+            25% {
+                transform: translateX(3px);
+            }
+
+            50% {
+                transform: translateX(-3px);
+            }
+        }
+
         button {
             border: none;
             font-size: 26px;
@@ -260,10 +282,6 @@
 
 
 
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-        crossorigin="anonymous"></script>
     <script>
         // let years = document.querySelectorAll('.year')
         let ppls = document.querySelectorAll('.ppls')
@@ -271,31 +289,36 @@
 
         input.forEach(arr => {
             arr.addEventListener('input', (e) => {
+                e.target.classList.remove('error')
                 e.target.value = e.target.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');
             })
         })
+
         calcDemand(2038)
 
         document.querySelector('#calcBtn').addEventListener('click', compute)
-        document.querySelector('#year').addEventListener('keydown', (e)=>{
-            if(e.key === "Enter") compute()
-    
+        document.querySelector('#year').addEventListener('keydown', (e) => {
+            if (e.key === "Enter") compute()
+
         })
 
-        function compute(){
-            let input = document.querySelectorAll('input')
-            let year = document.querySelector('#year').value
-            for (let i = 0; i < input.length; i++) {
+        function compute() {
 
-                if (!input[i].value) {
-                    alert('fill all the empty fields')
+            document.querySelectorAll('input').forEach(input => {
+                if (!input.value) {
+                    input.classList.remove('error')
+                    setTimeout(() => {
+                        input.classList.add('error')
+                    }, 1);
+                    input.focus()
                     return
                 }
-            }
-            if (!year) {
-                alert('Enter year')
-                return
-            }
+            })
+
+            // if (!year) {
+            //     alert('Enter year')
+            //     return
+            // }
             // if(year<Array.from(document.querySelectorAll('.years')).at(-1).value){
             //     alert('Enter Valid Year')
             //     return
