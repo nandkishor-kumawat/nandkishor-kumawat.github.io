@@ -303,26 +303,24 @@
         })
 
         function compute() {
+            let input = document.querySelectorAll('input')
+            let year = document.querySelector('#year').value
 
-            document.querySelectorAll('input').forEach(input => {
-                if (!input.value) {
-                    input.classList.remove('error')
+            input.forEach(e => {
+                if (!e.value) {
+                    e.classList.remove('error')
                     setTimeout(() => {
-                        input.classList.add('error')
+                        e.classList.add('error')
                     }, 1);
-                    input.focus()
-                    return
                 }
             })
 
-            // if (!year) {
-            //     alert('Enter year')
-            //     return
-            // }
-            // if(year<Array.from(document.querySelectorAll('.years')).at(-1).value){
-            //     alert('Enter Valid Year')
-            //     return
-            // }
+            for (let i = 0; i < input.length; i++) {
+                if (!input[i].value) {
+                    return
+                }
+            }
+
             calcDemand(year)
         }
 
