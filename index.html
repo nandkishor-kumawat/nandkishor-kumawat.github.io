@@ -11,21 +11,6 @@
 <body>
     <div class="main">
         <h1>Github Pages</h1>
-        <!-- <a href="/html-editor" target="_blank" rel="noopener noreferrer">html editor</a>
-        <a href="/multi-url-opener" target="_blank" rel="noopener noreferrer">multi url opener</a>
-        <a href="/pgs" target="_blank" rel="noopener noreferrer">Password Generator</a>
-        <a href="/pgu" target="_blank" rel="noopener noreferrer">Password Generator Ultra</a>
-        <a href="/js-keycode/" target="_blank" rel="noopener noreferrer">Js Keycode</a>
-        <a href="/learn-typing" target="_blank" rel="noopener noreferrer">learn typing</a>
-        <a href="/todo-app" target="_blank" rel="noopener noreferrer">Todo App</a>
-        <a href="/sketch-box" target="_blank" rel="noopener noreferrer">Sketch Box</a>
-        <a href="/clock" target="_blank" rel="noopener noreferrer">Clock</a>
-        <a href="/tic-tac-toe" target="_blank" rel="noopener noreferrer">Tic Tac Toe</a>
-        <a href="/quote-generator" target="_blank" rel="noopener noreferrer">Quote Generator</a>
-        <a href="/sudoku" target="_blank" rel="noopener noreferrer">Sudoku</a>
-        <a href="/fancy-border-radius-4" target="_blank" rel="noopener noreferrer">fancy border radius 4 point</a>
-        <a href="/fancy-border-radius-8" target="_blank" rel="noopener noreferrer">fancy border radius 8 point</a>
-        <a href="/fancy-border-radius" target="_blank" rel="noopener noreferrer">fancy border radius</a> -->
         <div id="repo"></div>
 
 
@@ -121,10 +106,10 @@
             ]
 
         }
+
         links.repo.map(ele => {
             document.getElementById('repo').innerHTML += `<a href="${ele.url}" target="_blank" rel="noopener noreferrer">${ele.name}</a>`
         })
-
 
         let allLinks = document.querySelectorAll('a');
         allLinks.forEach(ele => ele.innerHTML += `<span></span><span></span><span></span><span></span>`);
