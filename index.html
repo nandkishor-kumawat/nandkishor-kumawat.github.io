@@ -34,7 +34,7 @@
         <a href="https://tiny.cu.ma/" target="_blank" rel="noopener noreferrer">URL shortner</a>
         <a href="https://ups.cu.ma/" target="_blank" rel="noopener noreferrer">Private Note</a>
         <a href="./rarreg.key" target="_blank" rel="noopener noreferrer" download>Winrar Key</a>
-        <a href="./IDM 6 38 Build18.rar" target="_blank" rel="noopener noreferrer" download>IDM Key</a>
+        <a href="./IDM 6 38 Build18.zip" target="_blank" rel="noopener noreferrer" download>IDM Key</a>
 
 
     </div>
@@ -111,8 +111,8 @@
 
         }
 
-        links.repo.map(ele => {
-            document.getElementById('repo').innerHTML += `<a href="${ele.url}" target="_blank" rel="noopener noreferrer">${ele.name}</a>`
+        links.repo.map(({url,name}) => {
+            document.getElementById('repo').innerHTML += `<a href="${url}" target="_blank" rel="noopener noreferrer">${name}</a>`
         })
 
         let allLinks = document.querySelectorAll('a');
@@ -134,7 +134,7 @@
         // var itv = setInterval(() => {
         //     if (count == 47) clearInterval(itv);
         //     do {
-        //         var dmi = document.querySelector(`div[data-msg-id="${id}"] span[title="link"] + a`);
+        //         var dmi = Number(document.querySelector(`div[data-msg-id="${id}"] span[title="link"] + a`));
         //         id--;
         //     } while (!dmi);
         //     if (dmi) {
