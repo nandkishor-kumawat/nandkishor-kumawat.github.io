@@ -108,11 +108,15 @@
                     name: "Chess",
                     url: "chess"
                 },
+                {
+                    name: 'nlnchat',
+                    url: 'https://nlnchat.onrender.com/'
+                }
             ]
 
         }
 
-        links.repo.map(({url,name}) => {
+        links.repo.map(({ url, name }) => {
             document.getElementById('repo').innerHTML += `<a href="${url}" target="_blank" rel="noopener noreferrer">${name}</a>`
         })
 
